@@ -15,13 +15,35 @@ main {
 }
 
 article { flex: 1; }
+section { display: flex; }
+
+@media (width<=1080px) {
+  section { flex-direction: column; }
+}
 
 nav {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #192939;
+  background-color: var(--ink-black);
   display: flex;
+  color: white;
 }
 
-footer { width: 100%; }
+.nav-link {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  flex: 1;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover, .nav-link:active {
+  text-decoration: underline;
+  background-color: var(--shadow-gray);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--champagne-mist);
+}
