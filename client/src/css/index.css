@@ -17,8 +17,14 @@ main {
 article { flex: 1; }
 section { display: flex; }
 
-@media (width<=1080px) {
+@media (width<=920px) {
   section { flex-direction: column; }
+  nav { flex-direction: column; position: absolute }
+}
+
+@media (width>920px) {
+  .nav-button { display: none; }
+  .closed { max-height: 400px; }
 }
 
 nav {
@@ -28,6 +34,28 @@ nav {
   background-color: var(--ink-black);
   display: flex;
   color: white;
+  transition: 0.4s ease-in;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.closed { max-height: 0; }
+
+.nav-button {
+  position: absolute;
+  padding: 15px;
+  border-radius: 100%;
+  border-top-left-radius: 0;
+  top: 0;
+  left: 0;
+  border: none;
+  transition: 0.3s ease;
+  z-index: 1000;
+  background-color: var(--champagne-mist);
+}
+
+.nav-button:hover {
+  background-color: var(--khaki-beige);
 }
 
 .nav-link {
