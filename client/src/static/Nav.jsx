@@ -9,6 +9,7 @@ export default function Nav() {
           <Link className="nav-link" to='/'>Home</Link>
           <Link className="nav-link" to='/info'>Information</Link>
           <Link className="nav-link" to='/view'>Databases</Link>
+          <Link className="nav-link" to='/maps'>Maps</Link>
           <Link className="nav-link" to='/visit'>Visitation Guidelines</Link>
           <Link className="nav-link" to='/design'>Design Guidelines</Link>
           <Link className="nav-link" to='/contact'>Contact</Link>

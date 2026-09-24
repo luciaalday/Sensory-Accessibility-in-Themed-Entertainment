@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Error from './pages/Error';
 import Design from './pages/Design';
 import Visitation from './pages/Visitation';
+import Maps from './pages/Maps';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path='/' element={<Home />} />
           <Route path='/info' element={<Information />} />
           <Route path='/view' element={<Database />} />
+          <Route path='/maps' element={<Maps />} />
           <Route path='/visit' element={<Visitation />} />
           <Route path='/design' element={<Design />} />
           <Route path='/contact' element={<Contact />} />

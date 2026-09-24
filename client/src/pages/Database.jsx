@@ -2,6 +2,35 @@ export default function Database() {
   return (
     <article>
       <h1>Database</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Body
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Body
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Body
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Body
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </article>
   )
 }
