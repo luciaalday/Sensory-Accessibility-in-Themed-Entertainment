@@ -5,16 +5,13 @@ import tpegLogo from '../img/Official_Logo.png'
 export default function Footer() {
   return (
     <footer>
+      <img alt='TPEG logo' src={tpegLogo} />
+      <div className="row">
       <div>
-        <section>
-          <p>Sensory Accessibility in Themed Entertainment</p>
-          <p>&copy; Anthony Rascon, Icarus Newton, Lucia Alday</p>
-        </section>
-        <div className="row">
-          <img alt='TPEG logo' src={tpegLogo} />
-          <img alt='University of Arizona logo' src={blockA} />
-        </div> 
+        <p>Sensory Accessibility in Themed Entertainment</p>
+        <p>&copy; Anthony Rascon, Icarus Newton, Lucia Alday</p>
       </div>
+      <hr></hr>
       <div>
         <Link to='/'>Home</Link>
         <Link to='/info'>Information</Link>
@@ -24,6 +21,8 @@ export default function Footer() {
         <Link to='/design'>Design Guidelines</Link>
         <Link to='/contact'>Contact</Link>
       </div>
+      </div>
+      <img alt='University of Arizona logo' src={blockA} />
     </footer>
   )
 }

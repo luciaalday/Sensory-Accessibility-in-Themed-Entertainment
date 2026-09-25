@@ -14,13 +14,11 @@ export default function Error({ code, url=null, link='/', redirect='Back to home
     };
 
     return (
-        <article className='error-page'>
-            <section>
+        <article className='page'>
                 <h1>Error {code}</h1>
                 <p>{message[code]}</p>
                 {url  && <a href={url}>{redirect??url}</a>}
                 {link && <Link to={link}>{redirect??link}</Link>}
-            </section>
         </article>
     );
 }

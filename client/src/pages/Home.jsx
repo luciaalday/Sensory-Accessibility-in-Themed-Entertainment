@@ -1,7 +1,15 @@
 export default function Home() {
   return (
-    <article>
-      <h1>Home</h1>
-    </article>
+    <div className="page">
+      <article className="hero">
+        <h1>Homepage</h1>
+        <p>Hero section</p>
+        <button>CTA Button</button>
+      </article>
+      <article>
+        <h1>Content</h1>
+        <p>Lorem ipsum</p>
+      </article>
+    </div>
   )
 }
