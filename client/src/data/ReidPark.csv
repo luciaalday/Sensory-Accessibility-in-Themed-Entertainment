@@ -1,0 +1,13 @@
+Node,Node #,Risk Level,Sound Level,Crowd Density,Sound Sources,Strong Scent,High Heat Risk,Visually Aggressive ,Surprising Effect,Foliage Amount,Common Material,Claustophobic / Why,Other Notes
+1,1,5,88.00,0.5,5,false,true,true,false,Low,Plaster,,Photo Taken
+1,2,2,70.00,1,3,false,false,false,false,Low,Plaster,,
+1,3,1,45.00,0.8,3,false,false,false,false,Low,Plaster,,
+1,4,2,33.00,5,2,true,true,false,false,Medium,Metal,,Thermal Imagery Made
+1,5,1,32.00,4.4,3,false,true,false,false,High,Wood,,
+1,6,2,78.00,3,8,false,false,false,false,High,Wood,,
+1,7,3,75.00,1,4,false,true,false,false,Medium,Wood,,Photo Taken
+1,8,2,50.00,3.2,3,false,false,true,true,Medium,Metal,,
+1,9,0,55.00,11.2,3,false,false,false,false,Medium,Vaires,,
+1,10,0,33.00,6.2,2,false,false,false,false,Medium,Concrete,,
+1,11,1,44.00,4.3,3,true,false,false,false,Low,Contrete,,
+1,12,3,122.00,3.2,6,true,false,false,false,Low,Concrete,,

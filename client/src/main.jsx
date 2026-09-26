@@ -7,6 +7,7 @@ import './css/App.css'
 import './css/index.css'
 import './css/defaults.css'
 import './css/nav.css'
+import './css/map.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

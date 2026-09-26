@@ -9,9 +9,13 @@ export default function Nav() {
           <Link className="nav-link" to='/'>Home</Link>
           <Link className="nav-link" to='/info'>Information</Link>
           <Link className="nav-link" to='/view'>Databases</Link>
-          <Link className="nav-link" to='/maps'>Maps</Link>
-          <Link className="nav-link" to='/visit'>Visitation Guidelines</Link>
-          <Link className="nav-link" to='/design'>Design Guidelines</Link>
+          <div className="dropdown">
+            <div className="disabled nav-link">Guidelines</div>
+            <div className="dropdown-content">
+              <Link className="nav-link" to='/visit'>For Visitation</Link>
+              <Link className="nav-link" to='/design'>For Design</Link>
+            </div>
+          </div>
           <Link className="nav-link" to='/contact'>Contact</Link>
         </div>
       </nav>

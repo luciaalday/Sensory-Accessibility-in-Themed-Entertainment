@@ -15,10 +15,10 @@ export default function Error({ code, url=null, link='/', redirect='Back to home
 
     return (
         <article className='page'>
-                <h1>Error {code}</h1>
-                <p>{message[code]}</p>
-                {url  && <a href={url}>{redirect??url}</a>}
-                {link && <Link to={link}>{redirect??link}</Link>}
+            <h1>Error {code}</h1>
+            <p>{message[code]}</p>
+            {url  && <a href={url}>{redirect??url}</a>}
+            {link && <Link to={link}>{redirect??link}</Link>}
         </article>
     );
 }

@@ -1,7 +1,9 @@
 export default function Design() {
   return (
-    <article>
-      <h1>Design</h1>
-    </article>
+    <div className="page">
+      <article className="hero">
+        <h1>Design Guidelines</h1>
+      </article>
+    </div>
   )
 }

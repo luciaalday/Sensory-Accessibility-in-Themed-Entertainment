@@ -8,7 +8,10 @@
 .hero {
   text-align: center;
   padding: 5%;
-  background: linear-gradient(to right, var(--champagne-mist), var(--khaki-beige), var(--gray-olive));
+  background-size: cover;
+  background-position: center;
+  background-image:
+    url('../img/SixFlags1.jpg');
 }
 
 button {
@@ -18,6 +21,7 @@ button {
   border: none;
   box-shadow: 0 0 5px 1px gray;
   color: white;
+  transition: 0.2s ease;
 }
 button:hover {
   box-shadow: 0 0 5px 1px white;
@@ -44,4 +48,12 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+select {
+  background-color: var(--shadow-gray);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
 }

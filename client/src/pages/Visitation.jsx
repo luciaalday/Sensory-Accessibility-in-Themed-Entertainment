@@ -1,7 +1,9 @@
 export default function Visitation() {
   return (
-    <article>
-      <h1>Visitation</h1>
-    </article>
+    <div className="page">
+      <article className="hero">
+        <h1>Visitation Guidelines</h1>
+      </article>
+    </div>
   )
 }

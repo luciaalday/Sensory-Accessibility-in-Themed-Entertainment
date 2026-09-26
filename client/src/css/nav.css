@@ -127,6 +127,9 @@ nav {
 @media (width<=780px) {
     nav {
         position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
     }
     .nav-links {
         max-height: 0px;

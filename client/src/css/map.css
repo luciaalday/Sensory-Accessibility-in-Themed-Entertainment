@@ -1,0 +1,14 @@
+@import url('./defaults.css');
+
+.map-container {
+  width: 500px;
+  height: 500px;
+  max-width: 500px;
+  max-height: 500px;
+  border: 1px solid var(--shadow-gray);
+  box-shadow: 0 0 5px 1px gray;
+  background-size: contain;
+  background-position: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
