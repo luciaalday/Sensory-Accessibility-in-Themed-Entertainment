@@ -3,8 +3,9 @@
 .map-container {
   width: 500px;
   height: 500px;
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 90%;
+  max-height: 90%;
+  aspect-ratio: 1;
   border: 1px solid var(--shadow-gray);
   box-shadow: 0 0 5px 1px gray;
   background-size: contain;
