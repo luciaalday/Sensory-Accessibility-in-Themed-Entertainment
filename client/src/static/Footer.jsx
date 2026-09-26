@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <img alt='TPEG logo' src={tpegLogo} />
-      <div className="row">
+      <section>
       <div>
         <p>Sensory Accessibility in Themed Entertainment</p>
         <p>&copy; Anthony Rascon, Icarus Newton, Lucia Alday</p>
@@ -21,7 +21,7 @@ export default function Footer() {
         <Link to='/design'>Design Guidelines</Link>
         <Link to='/contact'>Contact</Link>
       </div>
-      </div>
+      </section>
       <img alt='University of Arizona logo' src={blockA} />
     </footer>
   )
