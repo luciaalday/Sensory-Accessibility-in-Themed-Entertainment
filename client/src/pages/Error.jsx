@@ -1,5 +1,6 @@
 // src/pages/Error.jsx
 import { Link } from 'react-router-dom'
+import bg from '../img/swish.png'
 
 export default function Error({ code, url=null, link='/', redirect='Back to homepage' }) {
     const message = {
@@ -14,11 +15,15 @@ export default function Error({ code, url=null, link='/', redirect='Back to home
     };
 
     return (
-        <article className='page'>
-            <h1>Error {code}</h1>
-            <p>{message[code]}</p>
-            {url  && <a href={url}>{redirect??url}</a>}
-            {link && <Link to={link}>{redirect??link}</Link>}
-        </article>
+        <div className='page'>
+            <article className="hero" style={{backgroundImage:`linear-gradient(to right, #ab0520e0, #0c234be0), url(${bg})`}}>
+                <h1>Error {code}</h1>
+            </article>
+            <article>
+                <h2>{message[code]}</h2>
+                {link && <Link to={link}>{redirect??link}</Link>}
+                {url  && <a href={url}>{redirect??url}</a>}
+            </article>
+        </div>
     );
 }
