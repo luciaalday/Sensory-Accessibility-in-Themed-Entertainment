@@ -89,4 +89,19 @@ select {
   }
 }
 
-/* idk */
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: var(--champagne-mist);
+  text-align: left;
+}
+
+form input, textarea, button {
+  margin-bottom: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+}

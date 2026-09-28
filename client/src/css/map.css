@@ -2,14 +2,39 @@
 
 .map-container {
   width: 500px;
-  height: 500px;
+  height: auto;
   max-width: 90%;
   max-height: 90%;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   border: 1px solid var(--shadow-gray);
   box-shadow: 0 0 5px 1px gray;
   background-size: contain;
   background-position: center;
   border-radius: 5px;
-  overflow: hidden;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+
+.map-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-container path {
+  fill: var(--ink-black);
+  stroke: var(--ink-black);
+  stroke-width: 5;
+  transition: 0.2s ease;
+  fill-opacity: 0.5;
+}
+.map-container path:hover {
+  fill: var(--light-shadow);
+  stroke: var(--light-shadow);
+}
+
+.map-container text {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
 }

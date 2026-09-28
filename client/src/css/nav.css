@@ -180,7 +180,6 @@ footer {
     background-color: var(--footer);
     color: var(--footer-text);
     padding: 20px;
-    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -200,10 +199,16 @@ hr {
 footer img {
     align-self: center;
     max-width: 80px;
+    flex-shrink: 1;
+    min-width: 40px;
 }
 
 footer .row {
     gap: 20px;
+}
+
+footer section {
+    min-width: 150px;
 }
 
 /* branding */
