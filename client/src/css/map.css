@@ -31,7 +31,6 @@
 }
 .map-container path:hover {
   fill: var(--light-shadow);
-  stroke: var(--light-shadow);
 }
 
 .map-container text {
