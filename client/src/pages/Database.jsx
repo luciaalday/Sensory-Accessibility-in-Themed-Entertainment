@@ -60,14 +60,14 @@ export default function Database() {
                     onMouseLeave={() => setHovered(null)}
                     className={attribute === 'risk_level' ? (n[attribute] > 4 ? 'bad' : n[attribute] > 2 ? 'mid' : 'good') 
                       : attribute === 'sound_level' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'crowd_density' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'sound_sources' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'strong_scent' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'high_heat_risk' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'visually_aggressive' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'surprising_effect' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'foliage_amount' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'claustrophobic_why' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
+                      : attribute === 'crowd_density' ? (n[attribute] > 10 ? 'bad' : n[attribute] > 6 ? 'mid' : 'good')
+                      : attribute === 'sound_sources' ? (n[attribute] > 5 ? 'bad' : n[attribute] > 2 ? 'mid' : 'good')
+                      : attribute === 'strong_scent' ? (n[attribute] ? 'bad' : 'good')
+                      : attribute === 'high_heat_risk' ? (n[attribute] ? 'bad' : 'good')
+                      : attribute === 'visually_aggressive' ? (n[attribute] ? 'bad' : 'good')
+                      : attribute === 'surprising_effect' ? (n[attribute] ? 'bad' : 'good')
+                      : attribute === 'foliage_amount' ? (n[attribute] === 'High' ? 'bad' : n[attribute] === 'Medium' ? 'mid' : 'good')
+                      : attribute === 'claustrophobic_why' ? (n[attribute] ? 'bad' : 'good')
                       : ''
                     }
                     />
