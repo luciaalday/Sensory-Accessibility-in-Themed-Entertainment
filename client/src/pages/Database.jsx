@@ -88,7 +88,18 @@ export default function Database() {
             {activeNode ? (
               <>
                 <h2>Node {activeNode.node}</h2>
-                <h3>Risk Level: {activeNode.risk_level}</h3>
+                <p><b>Risk Level:&ensp;</b>{activeNode.risk_level}</p>
+                <p><b>Sound Level:&ensp;</b>{activeNode.sound_level} db</p>
+                <p><b>Crowd Density:&ensp;</b>{activeNode.crowd_density}</p>
+                <p><b>Sound Sources:&ensp;</b>{activeNode.sound_sources}</p>
+                <p><b>Foliage Amount:&ensp;</b>{activeNode.foliage_amount}</p>
+                <p><b>Common Material:&ensp;</b>{activeNode.common_material}</p>
+                {activeNode.strong_scent && <p><b>Strong Scent</b></p>}
+                {activeNode.high_heat_risk && <p><b>High Heat Risk</b></p>}
+                {activeNode.visually_aggressive && <p><b>Visually Aggressive</b></p>}
+                {activeNode.surprising_effect && <p><b>Surprising Effect</b></p>}
+                {activeNode.claustrophobic_why && <p><b>Claustrophobic/why:&ensp;</b>{activeNode.claustrophobic_why}</p>}
+                {activeNode.notes && <p><b>Notes:&ensp;</b>{activeNode.notes}</p>}
               </>
             ) : (
               <p>Hover a node to see its stats</p>
