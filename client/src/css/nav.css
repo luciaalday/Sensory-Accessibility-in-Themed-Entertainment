@@ -209,6 +209,7 @@ footer .row {
 
 footer section {
     min-width: 150px;
+    align-items: first baseline;
 }
 
 /* branding */
