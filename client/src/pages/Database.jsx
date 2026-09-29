@@ -84,7 +84,7 @@ export default function Database() {
                 ))}
             </svg>
           </div>
-          <div className='column'>
+          <div className='column info-container'>
             {activeNode ? (
               <>
                 <h2>Node {activeNode.node}</h2>
