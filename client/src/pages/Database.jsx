@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import parks from '../data/parks.json'
 import bg from '../img/hulk-day.png'
-import Loading from '../components/Loading';
 
 export default function Database() {
   const parkNames = Object.keys(parks);
@@ -20,6 +19,37 @@ export default function Database() {
 
   const nodes = park?.nodes ?? [];
   const activeNode = nodes.find((n) => n.node === hovered);
+
+  const labels = {
+    risk_level: (v) => `Risk Level: ${v}`,
+    sound_level: (v) => `Sound Level: ${v} dB`,
+    crowd_density: (v) => `Crowd Density: ${v}`,
+    sound_sources: (v) => `Sound Sources: ${v}`,
+    foliage_amount: (v) => `Foliage: ${v}`,
+    strong_scent: (v) => (v ? 'Strong Scent observed' : 'No strong scent'),
+    high_heat_risk: (v) => (v ? 'High heat risk observed' : 'No high heat risk'),
+    visually_aggressive: (v) => (v ? 'Visually aggressive' : 'Not visually aggressive'),
+    surprising_effect: (v) => (v ? 'Surprising effect observed' : 'No surprising effect'),
+    claustrophobic_why: (v) => (v ? `Claustrophobic: ${v}` : 'Not claustrophobic'),
+  };
+  
+  const tooltip = (n, attribute) => {
+    const format = labels[attribute];
+    return format ? `${format(n[attribute])}` : ``;
+  };
+
+  const foliageRank = { Low: 0, Medium: 1, High: 2 };
+
+  const score = (n, attr) => {
+    const v = n[attr];
+    if (typeof v === 'number') return v;
+    if (attr === 'foliage_amount') return foliageRank[v] ?? 0;
+    return v ? 1 : 0;
+  };
+
+  const color = (t) => `hsl(${150 - 150 * t}, 70%, 45%)`;
+
+  const max = Math.max(...nodes.map((n) => score(n, attribute))) || 1;
 
   return (
     <div className="page">
@@ -53,33 +83,22 @@ export default function Database() {
                 .filter((n) => n.svg_path)
                 .map((n) => (
                   <g key={n.node}>
-                  <path
-                    key={n.node}
-                    d={n.svg_path}
-                    onMouseEnter={() => setHovered(n.node)}
-                    onMouseLeave={() => setHovered(null)}
-                    className={attribute === 'risk_level' ? (n[attribute] > 4 ? 'bad' : n[attribute] > 2 ? 'mid' : 'good') 
-                      : attribute === 'sound_level' ? (n[attribute] > 90 ? 'bad' : n[attribute] > 70 ? 'mid' : 'good')
-                      : attribute === 'crowd_density' ? (n[attribute] > 10 ? 'bad' : n[attribute] > 6 ? 'mid' : 'good')
-                      : attribute === 'sound_sources' ? (n[attribute] > 5 ? 'bad' : n[attribute] > 2 ? 'mid' : 'good')
-                      : attribute === 'strong_scent' ? (n[attribute] ? 'bad' : 'good')
-                      : attribute === 'high_heat_risk' ? (n[attribute] ? 'bad' : 'good')
-                      : attribute === 'visually_aggressive' ? (n[attribute] ? 'bad' : 'good')
-                      : attribute === 'surprising_effect' ? (n[attribute] ? 'bad' : 'good')
-                      : attribute === 'foliage_amount' ? (n[attribute] === 'High' ? 'bad' : n[attribute] === 'Medium' ? 'mid' : 'good')
-                      : attribute === 'claustrophobic_why' ? (n[attribute] ? 'bad' : 'good')
-                      : ''
-                    }
-                    />
-                  <text
-                    x={n.x_label}
-                    y={n.y_label}
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    pointerEvents="none"
-                  >
-                    {n[attribute] ?? n.node}
-                  </text>
+                    <path
+                      d={n.svg_path}
+                      onMouseEnter={() => setHovered(n.node)}
+                      onMouseLeave={() => setHovered(null)}
+                      style={attribute === 'no_filter' ? undefined : { fill: color(score(n, attribute) / max) }}
+                      />
+                    <text
+                      x={n.x_label}
+                      y={n.y_label}
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      pointerEvents="none"
+                    >
+                      {n.node}
+                    </text>
+                    <title>{tooltip(n, attribute)}</title>
                   </g>
                 ))}
             </svg>

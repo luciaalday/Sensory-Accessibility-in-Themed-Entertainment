@@ -53,22 +53,3 @@
 .info-container p {
   margin: 5px;
 }
-
-.good {
-  fill: #50f080 !important;
-}
-.good:hover {
-  fill:#14c06a !important;
-}
-.mid {
-  fill: #eff164 !important;
-}
-.mid:hover {
-  fill: #ebe712 !important;
-}
-.bad {
-  fill: #f05550  !important;
-}
-.bad:hover {
-  fill: #f81a12  !important;
-}

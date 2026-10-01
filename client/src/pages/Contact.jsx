@@ -34,12 +34,18 @@ export default function Contact() {
         <input type="hidden" name="access_key" value="bf9298c8-6758-47ac-8e4e-a3a3a9184277" />
         <input type="hidden" name="subject" value="New message regarding Sensory Accessibility in Themed Entertainment" />
         <input type="hidden" name="from_name" value="SATE Contact Form" />
-        <label>Name</label>
-        <input type="text" name="name" required />
-        <label>Email</label>
-        <input type="email" name="email" required />
-        <label>Ask away</label>
-        <textarea name="message" required></textarea>
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Ask away
+          <textarea name="message" required></textarea>
+        </label>
         <button type="submit">Submit</button>
       </form>
     </div>
